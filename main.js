@@ -99,10 +99,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navMenu = document.getElementById('navMenu');
-
-mobileMenuBtn.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-});
