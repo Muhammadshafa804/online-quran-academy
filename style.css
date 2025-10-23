@@ -4278,24 +4278,6 @@ footer {
         font-size: 0.9rem !important;
     }
 }
-
-/* ========== UNIVERSAL HAMBURGER FIX ========== */
-/* Add this if above doesn't work */
-
-/* Force hamburger menu on ALL pages in mobile */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        z-index: 1000 !important;
-    }
-    
-    .nav-menu:not(.active) {
-        display: none !important;
-    }
-}
-
 /* ========== BLOG PAGE HAMBURGER FIX ONLY ========== */
 /* Add this to the END of your existing style.css */
 
