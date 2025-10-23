@@ -1,15 +1,30 @@
-// main.js - Fixed Version
+// main.js - COMPLETE FIXED VERSION
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Online Quran Pak Academy - JS Loaded');
 
-    // Mobile Menu Toggle
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
+    // Mobile Menu Toggle - FIXED
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
 
-    if (mobileMenu && navMenu) {
-        mobileMenu.addEventListener('click', function () {
+    if (hamburgerMenu && navMenu) {
+        hamburgerMenu.addEventListener('click', function (e) {
+            e.stopPropagation();
             navMenu.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.nav-container') && !e.target.closest('.nav-menu')) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking on links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navMenu.classList.remove('active');
+            });
         });
     }
 
@@ -76,10 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
             this.reset();
         });
     }
-});
 
-// Pricing Toggle Functionality
-document.addEventListener('DOMContentLoaded', function () {
+    // Pricing Toggle Functionality
     const pricingToggle = document.getElementById('pricingToggle');
     const monthlyPrices = document.querySelectorAll('.price.monthly');
     const yearlyPrices = document.querySelectorAll('.price.yearly');
@@ -97,6 +110,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
 });
-
