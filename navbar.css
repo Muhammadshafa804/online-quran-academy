@@ -172,6 +172,16 @@
         font-size: 1.1rem;
     }
 }
+/* ========== DESKTOP STYLES ========== */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex !important;
+    }
+
+    .hamburger-menu {
+        display: none !important;
+    }
+}
 /* ========== MOBILE STYLES ========== */
 @media (max-width: 768px) {
     /* ... existing code ... */
@@ -191,17 +201,6 @@
     /* Ensure Free Trial button is visible */
     .nav-item:last-child {
         display: block !important;
-    }
-}
-
-/* ========== DESKTOP STYLES ========== */
-@media (min-width: 769px) {
-    .nav-menu {
-        display: flex !important;
-    }
-
-    .hamburger-menu {
-        display: none !important;
     }
 }
 
