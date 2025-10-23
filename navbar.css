@@ -150,12 +150,25 @@
         font-size: 16px;
     }
 
+    /* FREE TRIAL BUTTON FIX - ADD THIS */
     .nav-link.cta-button {
-        background: #d4af37;
-        margin: 10px;
-        border-radius: 5px;
-        text-align: center;
+        background: #d4af37 !important;
         color: #000 !important;
+        margin: 15px auto !important;
+        border-radius: 25px !important;
+        width: 180px !important;
+        text-align: center !important;
+        font-size: 16px !important;
+        font-weight: bold !important;
+        display: block !important;
+        padding: 12px 20px !important;
+        border: none !important;
+    }
+
+    /* Ensure Free Trial list item is visible */
+    .nav-item:last-child {
+        display: block !important;
+        order: 10;
     }
 
     .nav-container {
@@ -172,6 +185,7 @@
         font-size: 1.1rem;
     }
 }
+
 /* ========== DESKTOP STYLES ========== */
 @media (min-width: 769px) {
     .nav-menu {
@@ -180,64 +194,5 @@
 
     .hamburger-menu {
         display: none !important;
-    }
-}
-/* ========== MOBILE STYLES ========== */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: flex;
-    }
-    
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 75px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 75px);
-        background: linear-gradient(135deg, #0c4a60 0%, #1d6b7a 100%);
-        flex-direction: column;
-        padding: 20px 0;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        z-index: 999;
-        overflow-y: auto;
-    }
-    
-    .nav-menu.active {
-        display: flex;
-    }
-    
-    .nav-item {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-link {
-        padding: 15px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        width: 100%;
-        display: block;
-        font-size: 18px;
-    }
-    
-    /* FREE TRIAL BUTTON FIX */
-    .nav-link.cta-button {
-        background: #d4af37;
-        color: #000 !important;
-        margin: 20px auto;
-        border-radius: 25px;
-        width: 200px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        display: block;
-        padding: 12px 20px;
-        border: none;
-    }
-    
-    /* Ensure the last item (Free Trial) is visible */
-    .nav-item:last-child {
-        display: block;
-        order: 9; /* Last position */
     }
 }
