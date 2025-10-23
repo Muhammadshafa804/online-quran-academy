@@ -100,33 +100,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// Three Dots Mobile Menu Toggle
-const mobileDotsBtn = document.getElementById('mobileDotsBtn');
-const navMenu = document.getElementById('navMenu');
-
-mobileDotsBtn.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.nav-container')) {
-        navMenu.classList.remove('active');
-    }
-});
-// Hamburger Menu Toggle
-const hamburgerMenu = document.getElementById('hamburgerMenu');
-const navMenu = document.getElementById('navMenu');
-
-hamburgerMenu.addEventListener('click', function() {
-    navMenu.classList.toggle('mobile-dropdown');
-    navMenu.classList.toggle('active');
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.nav-container')) {
-        navMenu.classList.remove('mobile-dropdown');
-        navMenu.classList.remove('active');
-    }
-});
