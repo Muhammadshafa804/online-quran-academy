@@ -113,7 +113,7 @@ section {
 
 /* Automatic Background Image Slider for Hero Section */
 .hero {
-    background-image: url('../images/image1.jpg');
+    background-image: url('../image1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,27 +124,27 @@ section {
 
 @keyframes backgroundSlideHorizontal {
     0% {
-        background-image: url('../images/image1.jpg');
+        background-image: url('../image1.jpg');
         background-position: left center;
     }
 
     25% {
-        background-image: url('../images/image1.jpg');
+        background-image: url('../image1.jpg');
         background-position: right center;
     }
 
     50% {
-        background-image: url('../images/image2.jpg');
+        background-image: url('../image2.jpg');
         background-position: left center;
     }
 
     75% {
-        background-image: url('../images/image3.jpg');
+        background-image: url('../image3.jpg');
         background-position: right center;
     }
 
     100% {
-        background-image: url('../images/image1.jpg');
+        background-image: url('../image1.jpg');
         background-position: left center;
     }
 }
@@ -1565,7 +1565,7 @@ a[href*="tel"] {
 
 /* About Hero Background Image */
 .page-hero {
-    background-image: url('../images/about-bg.jpg');
+    background-image: url('../about-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1689,7 +1689,7 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
-    background-image: url('../images/courses-bg.jpg');
+    background-image: url('../courses-bg.jpg');
     background-size: cover;
     background-position: center;
     margin-top: 80px;
@@ -2262,7 +2262,7 @@ input:checked+.slider:before {
 
 /* About Page Hero Background */
 .page-hero {
-    background-image: url('../images/about-bg.jpg');
+    background-image: url('../about-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2305,7 +2305,7 @@ input:checked+.slider:before {
 
 /* Courses Page Hero Background */
 .courses-hero {
-    background-image: url('../images/courses-bg.jpg');
+    background-image: url('../courses-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2420,7 +2420,7 @@ input:checked+.slider:before {
 
 /* Contact Page Styles */
 .contact-hero {
-    background-image: url('../images/contact-bg.jpg');
+    background-image: url('../contact-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2585,7 +2585,7 @@ input:checked+.slider:before {
 
 /* Blog Page Styles */
 .blog-hero {
-    background-image: url('../images/blog/blog1-new.jpg');
+    background-image: url('../blog1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -2812,7 +2812,7 @@ input:checked+.slider:before {
 
 /* Teachers Page Styles */
 .teachers-hero {
-    background-image: url('../images/teachers-bg.jpg');
+    background-image: url('../teachers-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3402,7 +3402,7 @@ input:checked+.slider:before {
 
 /* Teachers Hero Background Fix */
 .teachers-hero {
-    background-image: url('../images/teachers/teachers-bg.jpg');
+    background-image: url('../teachers-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3750,4 +3750,5 @@ input:checked+.slider:before {
     background: #2c7744;
     color: white;
     transform: translateY(-2px);
+
 }
