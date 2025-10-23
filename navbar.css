@@ -111,13 +111,13 @@
     border-radius: 2px;
 }
 
-/* ========== MOBILE RESPONSIVE - CENTERED MENU ITEMS ========== */
+/* ========== MOBILE RESPONSIVE - PROPERLY CENTERED ========== */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
     }
 
-    /* FIXED: Menu centered with proper spacing */
+    /* Mobile Menu */
     .nav-menu {
         display: none !important;
         position: fixed;
@@ -137,7 +137,6 @@
         border-radius: 0;
     }
 
-    /* FIXED: Show menu with centered items */
     .nav-menu.active {
         display: flex !important;
         right: 0;
@@ -145,39 +144,46 @@
 
     .nav-item {
         width: 100%;
-        text-align: center;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* FIXED: Menu items centered with proper padding */
+    /* FIXED: Proper centered alignment */
     .nav-link {
-        padding: 15px 10px;
+        padding: 15px 5px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
-        display: block;
-        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
         margin: 0;
         text-align: center;
         transition: all 0.3s ease;
+        min-height: 50px;
     }
 
-    /* FIXED: Free Trial button centered */
+    /* FIXED: Free Trial button properly centered */
     .nav-link.cta-button {
         background: #d4af37 !important;
         color: #000 !important;
-        margin: 20px auto !important;
+        margin: 15px auto !important;
         border-radius: 20px !important;
-        width: 110px !important;
+        width: 100px !important;
         text-align: center !important;
-        font-size: 13px !important;
+        font-size: 12px !important;
         font-weight: bold !important;
-        display: block !important;
-        padding: 10px 15px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 10px !important;
         border: none !important;
+        min-height: 40px !important;
     }
 
-    /* FIXED: Remove gap from last item */
     .nav-item:last-child .nav-link {
         border-bottom: none;
     }
