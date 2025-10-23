@@ -99,3 +99,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+// Three Dots Mobile Menu Toggle
+const mobileDotsBtn = document.getElementById('mobileDotsBtn');
+const navMenu = document.getElementById('navMenu');
+
+mobileDotsBtn.addEventListener('click', function() {
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.nav-container')) {
+        navMenu.classList.remove('active');
+    }
+});
