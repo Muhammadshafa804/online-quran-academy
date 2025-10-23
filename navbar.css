@@ -19,7 +19,7 @@
     gap: 40px;
 }
 
-/* Logo Section - UPDATED */
+/* Logo Section */
 .logo-section {
     display: flex;
     align-items: center;
@@ -27,7 +27,6 @@
     flex-shrink: 0;
 }
 
-/* Circle Logo - UPDATED */
 .logo-img {
     border-radius: 50%;
     width: 50px;
@@ -48,7 +47,7 @@
     display: block !important;
 }
 
-/* Navigation Menu */
+/* Navigation Menu - DESKTOP */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -92,8 +91,73 @@
     margin-left: 15px !important;
 }
 
-/* Mobile responsive */
+/* Mobile Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* HIDE menu by default on mobile */
+    .nav-menu {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        width: 200px;
+        background: linear-gradient(135deg, #0c4a60 0%, #1d6b7a 100%);
+        flex-direction: column;
+        padding: 10px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        border-radius: 0 0 10px 10px;
+    }
+
+    /* SHOW menu when active class is added */
+    .nav-menu.active {
+        display: flex !important;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-link {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        display: block;
+        font-size: 16px;
+    }
+
+    .nav-link.cta-button {
+        background: #d4af37;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+        color: #000 !important;
+    }
+
     .nav-container {
         gap: 20px;
         height: 65px;
@@ -106,101 +170,16 @@
 
     .academy-name {
         font-size: 1.1rem;
-        display: block !important;
-    }
-
-    .nav-menu {
-        gap: 12px;
-    }
-
-    .nav-link {
-        font-size: 0.85rem;
-        padding: 8px 3px;
     }
 }
 
-@media (max-width: 480px) {
-    .academy-name {
-        font-size: 0.9rem;
-        display: block !important;
-    }
-}
-
-/* Mobile Menu */
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.mobile-menu span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-@media (max-width: 768px) {
-    .mobile-menu {
-        display: flex;
-    }
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #0c4a60;
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-}
-
-/* Mobile Navbar Fix - Keep Horizontal */
-@media (max-width: 768px) {
+/* ========== DESKTOP STYLES ========== */
+@media (min-width: 769px) {
     .nav-menu {
         display: flex !important;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
     }
 
-    .nav-item {
-        flex-shrink: 0;
+    .hamburger-menu {
+        display: none !important;
     }
-
-    .nav-link {
-        font-size: 0.8rem;
-        padding: 6px 8px;
-        white-space: nowrap;
-    }
-
-    .cta-button {
-        margin-left: 10px !important;
-        padding: 8px 15px !important;
-        font-size: 0.8rem !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-menu {
-        gap: 8px;
-    }
-
-    .nav-link {
-        font-size: 0.75rem;
-        padding: 5px 6px;
-    }
-
-    .academy-name {
-        font-size: 0.9rem;
-    }
-
 }
