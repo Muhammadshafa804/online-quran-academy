@@ -111,13 +111,13 @@
     border-radius: 2px;
 }
 
-/* ========== MOBILE RESPONSIVE - FIXED WIDTH ========== */
+/* ========== MOBILE RESPONSIVE - CENTERED MENU ITEMS ========== */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
     }
 
-    /* FIXED: Half width - 140px only */
+    /* FIXED: Menu centered with proper spacing */
     .nav-menu {
         display: none !important;
         position: fixed;
@@ -137,7 +137,7 @@
         border-radius: 0;
     }
 
-    /* FIXED: Show menu with half width */
+    /* FIXED: Show menu with centered items */
     .nav-menu.active {
         display: flex !important;
         right: 0;
@@ -145,27 +145,30 @@
 
     .nav-item {
         width: 100%;
-        text-align: left;
+        text-align: center;
         margin: 0;
         padding: 0;
     }
 
+    /* FIXED: Menu items centered with proper padding */
     .nav-link {
-        padding: 12px 15px;
+        padding: 15px 10px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         display: block;
         font-size: 14px;
         margin: 0;
+        text-align: center;
+        transition: all 0.3s ease;
     }
 
-    /* FIXED: Free Trial button - smaller for half width */
+    /* FIXED: Free Trial button centered */
     .nav-link.cta-button {
         background: #d4af37 !important;
         color: #000 !important;
-        margin: 15px auto !important;
+        margin: 20px auto !important;
         border-radius: 20px !important;
-        width: 120px !important;
+        width: 110px !important;
         text-align: center !important;
         font-size: 13px !important;
         font-weight: bold !important;
