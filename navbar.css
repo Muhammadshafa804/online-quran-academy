@@ -262,3 +262,73 @@
     }
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Mobile Dropdown Menu - INSIDE Navbar */
+.nav-container {
+    position: relative;
+}
+
+.nav-menu.mobile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: linear-gradient(135deg, #0c4a60 0%, #1d6b7a 100%);
+    flex-direction: column;
+    padding: 10px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-menu.mobile-dropdown.active {
+    display: flex;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .nav-menu:not(.mobile-dropdown) {
+        display: none;
+    }
+    
+    .nav-item {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-link {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        display: block;
+    }
+    
+    .nav-link.cta-button {
+        background: #d4af37;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+}
