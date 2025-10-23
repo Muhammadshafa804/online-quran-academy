@@ -4278,3 +4278,37 @@ footer {
         font-size: 0.9rem !important;
     }
 }
+
+/* ========== BLOG PAGE SPECIFIC HAMBURGER FIX ========== */
+/* Add this to your style.css file */
+
+/* Blog page specific hamburger fix */
+body.blog-page .hamburger-menu,
+body[class*="blog"] .hamburger-menu,
+.blog-hero ~ .navbar .hamburger-menu {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* If blog page has specific body class */
+.blog-body .hamburger-menu,
+.page-blog .hamburger-menu {
+    display: flex !important;
+}
+
+/* Mobile view for blog page */
+@media (max-width: 768px) {
+    /* Force hamburger on blog page */
+    .blog-hero + .navbar .hamburger-menu,
+    .blog-section ~ .navbar .hamburger-menu,
+    [class*="blog"] .hamburger-menu {
+        display: flex !important;
+    }
+    
+    /* Hide desktop menu on blog page mobile */
+    .blog-hero + .navbar .nav-menu,
+    .blog-section ~ .navbar .nav-menu {
+        display: none !important;
+    }
+}
