@@ -111,52 +111,61 @@
     border-radius: 2px;
 }
 
-/* ========== MOBILE RESPONSIVE ========== */
+/* ========== MOBILE RESPONSIVE - FIXED GAP ISSUE ========== */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
     }
 
-    /* HIDE menu by default on mobile */
+    /* FIXED: Mobile menu positioning - no gaps */
     .nav-menu {
         display: none !important;
-        position: absolute;
-        top: 100%;
-        right: 20px;
-        width: 200px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
         background: linear-gradient(135deg, #0c4a60 0%, #1d6b7a 100%);
         flex-direction: column;
-        padding: 10px 0;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
-        border-radius: 0 0 10px 10px;
+        padding: 80px 0 20px 0;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        gap: 0;
+        margin: 0;
+        border-radius: 0;
     }
 
-    /* SHOW menu when active class is added */
+    /* FIXED: Show menu from side without gaps */
     .nav-menu.active {
         display: flex !important;
+        right: 0;
     }
 
     .nav-item {
         width: 100%;
         text-align: left;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-link {
-        padding: 12px 20px;
+        padding: 15px 25px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         display: block;
         font-size: 16px;
+        margin: 0;
     }
 
-    /* FREE TRIAL BUTTON FIX - ADD THIS */
+    /* FIXED: Free Trial button styling */
     .nav-link.cta-button {
         background: #d4af37 !important;
         color: #000 !important;
-        margin: 15px auto !important;
+        margin: 20px auto !important;
         border-radius: 25px !important;
-        width: 180px !important;
+        width: 200px !important;
         text-align: center !important;
         font-size: 16px !important;
         font-weight: bold !important;
@@ -165,10 +174,9 @@
         border: none !important;
     }
 
-    /* Ensure Free Trial list item is visible */
-    .nav-item:last-child {
-        display: block !important;
-        order: 10;
+    /* FIXED: Remove gap from last item */
+    .nav-item:last-child .nav-link {
+        border-bottom: none;
     }
 
     .nav-container {
@@ -196,3 +204,4 @@
         display: none !important;
     }
 }
+
