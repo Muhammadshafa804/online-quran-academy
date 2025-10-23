@@ -3752,3 +3752,128 @@ input:checked+.slider:before {
     transform: translateY(-2px);
 
 }
+
+/* ========== TEACHERS PAGE MOBILE FIX ========== */
+/* Add this to your style.css file */
+
+/* Teachers Section Mobile Center Fix */
+.teachers-section .container,
+.team-section .container,
+.qualified-teachers .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Teaching Team Content Center */
+.our-teachers,
+.qualified-teachers,
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Teacher Cards Center Alignment */
+.teacher-card,
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Teacher Images Center */
+.teacher-img,
+.team-img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Teacher Info Center */
+.teacher-info,
+.member-info {
+    text-align: center;
+    width: 100%;
+}
+
+/* Senior Teacher Section Center */
+.senior-teacher,
+.featured-teacher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mobile Specific Fixes */
+@media (max-width: 768px) {
+    /* Force all teachers content to center */
+    .teachers-section h1,
+    .teachers-section h2,
+    .teachers-section h3,
+    .teachers-section p {
+        text-align: center !important;
+    }
+    
+    /* Teacher grid center alignment */
+    .teachers-grid,
+    .team-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    /* Individual teacher cards */
+    .teacher-card {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Teacher image mobile center */
+    .teacher-card img {
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Text content center */
+    .teacher-card h3,
+    .teacher-card p {
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Senior teacher section */
+    .senior-teacher {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Our Qualified Teaching Team section */
+    .qualified-teachers h2,
+    .qualified-teachers p {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .teacher-card {
+        width: 95%;
+    }
+    
+    .teachers-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .teachers-section h2 {
+        font-size: 1.5rem;
+    }
+}
