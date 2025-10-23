@@ -4058,3 +4058,223 @@ input:checked+.slider:before {
         font-size: 0.6rem !important;
     }
 }
+
+/* ========== FOOTER CENTER DESIGN FIX ========== */
+/* Add this to your style.css file */
+
+/* Footer Center Alignment & Design */
+footer {
+    background: linear-gradient(135deg, #0c4a60 0%, #1d6b7a 100%) !important;
+    color: white !important;
+    padding: 60px 0 20px !important;
+    text-align: center !important;
+}
+
+.footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 40px !important;
+    margin-bottom: 40px !important;
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 20px !important;
+}
+
+/* Footer Sections Center Alignment */
+.footer-section {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+}
+
+/* Footer Headings */
+.footer-section h3 {
+    color: #FFD700 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    font-family: 'Amiri', serif !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    border-bottom: 2px solid #FFD700 !important;
+    padding-bottom: 8px !important;
+    display: inline-block !important;
+}
+
+/* Footer Description */
+.footer-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.6 !important;
+    margin-bottom: 20px !important;
+    font-size: 1rem !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Footer Lists Center */
+.footer-section ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.footer-section ul li {
+    margin-bottom: 0 !important;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    font-size: 1rem !important;
+    font-family: 'Open Sans', sans-serif !important;
+    padding: 8px 15px !important;
+    border-radius: 20px !important;
+    display: inline-block !important;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700 !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateX(5px) !important;
+}
+
+/* Contact Info Styling */
+.contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.contact-info p {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 0 !important;
+    font-size: 1rem !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.contact-info p i {
+    color: #FFD700 !important;
+    font-size: 1.2rem !important;
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+    color: white !important;
+    padding: 12px 25px !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    margin-top: 15px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    border: 2px solid transparent !important;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4) !important;
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%) !important;
+    border-color: white !important;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center !important;
+    padding-top: 30px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    margin-top: 20px !important;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        gap: 30px !important;
+        padding: 0 15px !important;
+    }
+    
+    .footer-section {
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .footer-section p {
+        font-size: 0.95rem !important;
+    }
+    
+    .footer-section ul li a {
+        font-size: 0.95rem !important;
+        padding: 6px 12px !important;
+    }
+    
+    .contact-info p {
+        font-size: 0.95rem !important;
+    }
+    
+    .whatsapp-btn {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    footer {
+        padding: 40px 0 15px !important;
+    }
+    
+    .footer-content {
+        gap: 25px !important;
+        padding: 0 10px !important;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem !important;
+    }
+    
+    .footer-section ul {
+        gap: 8px !important;
+    }
+    
+    .footer-section ul li a {
+        font-size: 0.9rem !important;
+    }
+    
+    .contact-info {
+        gap: 10px !important;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem !important;
+    }
+}
