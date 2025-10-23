@@ -3753,128 +3753,130 @@ input:checked+.slider:before {
 
 }
 
-/* ========== TEACHERS PAGE MOBILE FULL SCREEN FIX ========== */
-/* Add this to your style.css file */
+/* ========== TEACHERS PAGE MOBILE CENTER FIX ========== */
+/* Add this at the END of your style.css file */
 
-/* Teachers Section Full Screen Mobile Fix */
+/* Force all teachers content to center on mobile */
 @media (max-width: 768px) {
-    /* Remove all gaps and padding from body and html */
-    html, body {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-        overflow-x: hidden !important;
-    }
-    
-    /* Main container full width */
-    .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 15px !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Teachers section full width */
-    .teachers-section,
-    .team-section,
-    .qualified-teachers {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 20px 15px !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Force all content to center and full width */
-    .teachers-section h1,
-    .teachers-section h2,
-    .teachers-section h3,
-    .teachers-section p,
-    .teacher-info,
-    .member-info {
+    /* Teachers section full width center */
+    .teachers-section .container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         text-align: center !important;
         width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 15px !important;
+    }
+    
+    /* Section intro center */
+    .section-intro {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .section-intro h2,
+    .section-intro p {
+        text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        padding: 0 10px !important;
-        box-sizing: border-box !important;
     }
     
-    /* Senior Teacher Section Full Width */
-    .senior-teacher,
-    .featured-teacher {
+    /* Teachers grid center alignment */
+    .teachers-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
         width: 100% !important;
+    }
+    
+    /* Teacher cards center */
+    .teacher-card {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        margin: 0 !important;
-        padding: 20px 15px !important;
-        box-sizing: border-box !important;
     }
     
-    /* Teacher image full width responsive */
-    .teacher-img,
-    .team-img,
-    .senior-teacher img {
+    /* Teacher info center */
+    .teacher-info {
+        text-align: center !important;
         width: 100% !important;
-        max-width: 300px !important;
-        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    /* Teacher image center */
+    .teacher-image {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    .teacher-image img {
         display: block !important;
         margin: 0 auto !important;
-        border-radius: 10px !important;
     }
     
-    /* Teacher cards full width */
-    .teacher-card,
-    .team-member {
+    /* Specific fix for Ahmed Ali teacher card */
+    .teacher-card:first-child {
         width: 100% !important;
-        max-width: 100% !important;
-        margin: 15px 0 !important;
-        padding: 20px !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        flex-direction: column !important;
+        max-width: 400px !important;
+    }
+    
+    .teacher-card:first-child .teacher-info h3,
+    .teacher-card:first-child .teacher-title,
+    .teacher-card:first-child .teacher-rating,
+    .teacher-card:first-child .teacher-bio,
+    .teacher-card:first-child .teacher-skills,
+    .teacher-card:first-child .teacher-stats {
+        text-align: center !important;
+        justify-content: center !important;
         align-items: center !important;
     }
     
-    /* Remove any side gaps */
-    .row,
-    .col,
-    .grid {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
+    /* Teacher skills center */
+    .teacher-skills {
+        justify-content: center !important;
+        text-align: center !important;
     }
     
-    /* Specific fix for Ahmed Ali section */
-    .senior-teacher h2,
-    .senior-teacher h3,
-    .senior-teacher p {
-        width: 100% !important;
+    /* Teacher stats center */
+    .teacher-stats {
+        justify-items: center !important;
         text-align: center !important;
-        margin: 10px 0 !important;
-        padding: 0 5px !important;
+    }
+    
+    /* Force all text to center */
+    .teacher-info h3,
+    .teacher-title,
+    .teacher-bio,
+    .teacher-rating,
+    .skill-tag {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 
-/* Extra small devices complete fix */
+/* Extra small devices */
 @media (max-width: 480px) {
-    .teachers-section {
-        padding: 15px 10px !important;
-    }
-    
     .teacher-card {
-        padding: 15px !important;
+        max-width: 100% !important;
+        margin: 0 10px !important;
     }
     
-    .senior-teacher {
-        padding: 15px 10px !important;
+    .teacher-info {
+        padding: 20px 15px !important;
     }
     
-    /* Ensure no horizontal scroll */
-    body {
-        overflow-x: hidden !important;
-        position: relative !important;
+    .teacher-stats {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
     }
 }
