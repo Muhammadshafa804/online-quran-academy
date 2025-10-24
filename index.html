@@ -221,63 +221,77 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact Info</h4>
+                <h4>Contact Information</h4>
                 
-                <!-- Phone - Clickable -->
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                <div class="contact-info-grid">
+                    <!-- Phone -->
+                    <div class="contact-card phone-card">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h5>Phone</h5>
+                        </div>
+                        <a href="tel:+923427704474" class="contact-main-link">+92 342 7704474</a>
+                        <p class="contact-description">Available 24/7</p>
                     </div>
-                    <div class="contact-details">
-                        <h3>Phone</h3>
-                        <a href="tel:+923427704474" class="contact-link">+92 342 7704474</a>
-                        <span class="contact-subtext">Available 24/7</span>
+
+                    <!-- Email -->
+                    <div class="contact-card email-card">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h5>Email</h5>
+                        </div>
+                        <a href="mailto:onlinequranpakacademy51214@gmail.com" class="contact-main-link">onlinequranpakacademy51214@gmail.com</a>
+                        <p class="contact-description">We reply within 2 hours</p>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact-card whatsapp-card">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <h5>WhatsApp</h5>
+                        </div>
+                        <a href="https://wa.me/923427704474" class="contact-main-link" target="_blank">+92 342 7704474</a>
+                        <p class="contact-description">Instant messaging</p>
+                    </div>
+
+                    <!-- Working Hours -->
+                    <div class="contact-card hours-card" onclick="toggleWorkingHours()">
+                        <div class="contact-header">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h5>Working Hours</h5>
+                        </div>
+                        <span class="contact-main-link hours-toggle">View Timings</span>
+                        <p class="contact-description">Click to see schedule</p>
                     </div>
                 </div>
 
-                <!-- Email - Clickable -->
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <a href="mailto:onlinequranpakacademy51214@gmail.com" class="contact-link">onlinequranpakacademy51214@gmail.com</a>
-                        <span class="contact-subtext">We reply within 2 hours</span>
-                    </div>
-                </div>
-
-                <!-- WhatsApp - Clickable -->
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>WhatsApp</h3>
-                        <a href="https://wa.me/923427704474" class="contact-link" target="_blank">+92 342 7704474</a>
-                        <span class="contact-subtext">Instant messaging</span>
-                    </div>
-                </div>
-
-                <!-- Working Hours - Clickable with JavaScript -->
-                <div class="contact-method working-hours" onclick="toggleWorkingHours()">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Working Hours</h3>
-                        <p class="contact-link hours-toggle">Click to view timings</p>
-                        <span class="contact-subtext">Flexible schedules available</span>
-                    </div>
-                </div>
-
-                <!-- Working Hours Content (Hidden by default) -->
-                <div id="hoursContent" class="hours-content">
+                <!-- Working Hours Dropdown -->
+                <div id="hoursDropdown" class="hours-dropdown">
                     <div class="hours-list">
-                        <p><strong>Monday - Friday:</strong>24/7</p>
-                        <p><strong>Saturday:</strong>24/7</p>
-                        <p><strong>Sunday:</strong>24/7</p>
-                        <p><strong>24/7 Support:</strong> Available for urgent queries</p>
+                        <div class="hours-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">24/7</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">24/7</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Sunday</span>
+                            <span class="time closed">24/7</span>
+                        </div>
+                        <div class="hours-item highlight">
+                            <span class="day">24/7 Support</span>
+                            <span class="time available">Available for urgent queries</span>
+                        </div>
                     </div>
                 </div>
 
@@ -298,6 +312,7 @@
 
 
 </html>
+
 
 
 
