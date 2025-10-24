@@ -111,3 +111,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// Working Hours Toggle Function
+function toggleWorkingHours() {
+    const hoursContent = document.getElementById('hoursContent');
+    const workingHoursLink = document.querySelector('.working-hours .contact-link');
+    
+    if (hoursContent.style.display === 'none' || hoursContent.style.display === '') {
+        hoursContent.style.display = 'block';
+        workingHoursLink.textContent = 'Hide timings';
+    } else {
+        hoursContent.style.display = 'none';
+        workingHoursLink.textContent = 'Click to view timings';
+    }
+}
+
+// Initialize working hours as hidden on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const hoursContent = document.getElementById('hoursContent');
+    if (hoursContent) {
+        hoursContent.style.display = 'none';
+    }
+});
