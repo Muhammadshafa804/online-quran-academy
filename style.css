@@ -4279,39 +4279,42 @@ footer {
     }
 }
 
-/* ========== CONTACT INFORMATION FIX ========== */
+/* ========== CONTACT INFORMATION COLOR FIX ========== */
 
-/* Contact Methods Styling */
+/* Contact Methods Styling with Better Colors */
 .contact-method {
     display: flex;
     align-items: flex-start;
     gap: 15px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
     margin-bottom: 15px;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
 }
 
 .contact-method:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: #FFD700;
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #0c4a60;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
 }
 
 .contact-details {
@@ -4319,55 +4322,86 @@ footer {
 }
 
 .contact-details h3 {
-    color: #FFD700;
-    margin: 0 0 5px 0;
-    font-size: 1.1rem;
+    color: #FFD700 !important;
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
     font-family: 'Amiri', serif;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact-link {
-    color: white !important;
+    color: #FFFFFF !important;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-link:hover {
     color: #FFD700 !important;
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.contact-details span {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.85rem;
+.contact-subtext {
+    color: #E8F4F8 !important;
+    font-size: 0.9rem;
     display: block;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
+    opacity: 0.9;
 }
 
 /* Working Hours Content */
 .hours-content {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+    border-radius: 12px;
     padding: 20px;
     margin-top: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.3);
     animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: none;
 }
 
 .hours-list p {
-    margin: 0 0 10px 0;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
+    margin: 0 0 12px 0;
+    color: #FFFFFF !important;
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hours-list p:last-child {
     margin-bottom: 0;
+    border-bottom: none;
 }
 
 .hours-list strong {
-    color: #FFD700;
+    color: #FFD700 !important;
+    font-weight: 700;
+}
+
+.hours-toggle {
+    cursor: pointer;
+    background: rgba(255, 215, 0, 0.2) !important;
+    border-color: rgba(255, 215, 0, 0.4) !important;
+}
+
+.hours-toggle:hover {
+    background: rgba(255, 215, 0, 0.3) !important;
 }
 
 @keyframes fadeIn {
@@ -4386,8 +4420,17 @@ footer {
     cursor: pointer !important;
 }
 
-.working-hours .contact-link {
-    cursor: pointer;
+/* Footer Section Headings */
+.footer-section h4 {
+    color: #FFD700 !important;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: 'Amiri', serif;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 8px;
+    display: inline-block;
 }
 
 /* Mobile Responsive */
@@ -4398,20 +4441,29 @@ footer {
     }
     
     .contact-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
     }
     
     .contact-details h3 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .contact-link {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+    
+    .contact-subtext {
+        font-size: 0.85rem;
     }
     
     .hours-content {
         padding: 15px;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.2rem;
     }
 }
