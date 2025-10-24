@@ -115,14 +115,16 @@ document.addEventListener('DOMContentLoaded', function () {
 // Working Hours Toggle Function
 function toggleWorkingHours() {
     const hoursContent = document.getElementById('hoursContent');
-    const workingHoursLink = document.querySelector('.working-hours .contact-link');
+    const hoursToggle = document.querySelector('.hours-toggle');
     
     if (hoursContent.style.display === 'none' || hoursContent.style.display === '') {
         hoursContent.style.display = 'block';
-        workingHoursLink.textContent = 'Hide timings';
+        hoursToggle.textContent = 'Hide timings';
+        hoursToggle.style.background = 'rgba(255, 215, 0, 0.4) !important';
     } else {
         hoursContent.style.display = 'none';
-        workingHoursLink.textContent = 'Click to view timings';
+        hoursToggle.textContent = 'Click to view timings';
+        hoursToggle.style.background = 'rgba(255, 215, 0, 0.2) !important';
     }
 }
 
