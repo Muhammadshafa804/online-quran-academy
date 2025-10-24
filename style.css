@@ -118,7 +118,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 500px;
-    animation: backgroundSlideHorizontal 10s infinite;
+    animation: backgroundSlideHorizontal 15s infinite;
     position: relative;
 }
 
@@ -4536,3 +4536,4 @@ footer {
         margin-bottom: 20px;
     }
 }
+
