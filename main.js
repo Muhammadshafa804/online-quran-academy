@@ -114,24 +114,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Working Hours Toggle Function
 function toggleWorkingHours() {
-    const hoursContent = document.getElementById('hoursContent');
+    const hoursDropdown = document.getElementById('hoursDropdown');
     const hoursToggle = document.querySelector('.hours-toggle');
     
-    if (hoursContent.style.display === 'none' || hoursContent.style.display === '') {
-        hoursContent.style.display = 'block';
-        hoursToggle.textContent = 'Hide timings';
-        hoursToggle.style.background = 'rgba(255, 215, 0, 0.4) !important';
+    if (hoursDropdown.style.display === 'none' || hoursDropdown.style.display === '') {
+        hoursDropdown.style.display = 'block';
+        hoursToggle.textContent = 'Hide Timings';
+        hoursToggle.style.color = '#FFD700';
     } else {
-        hoursContent.style.display = 'none';
-        hoursToggle.textContent = 'Click to view timings';
-        hoursToggle.style.background = 'rgba(255, 215, 0, 0.2) !important';
+        hoursDropdown.style.display = 'none';
+        hoursToggle.textContent = 'View Timings';
+        hoursToggle.style.color = '#FFFFFF';
     }
 }
 
-// Initialize working hours as hidden on page load
+// Initialize hours dropdown as hidden
 document.addEventListener('DOMContentLoaded', function() {
-    const hoursContent = document.getElementById('hoursContent');
-    if (hoursContent) {
-        hoursContent.style.display = 'none';
+    const hoursDropdown = document.getElementById('hoursDropdown');
+    if (hoursDropdown) {
+        hoursDropdown.style.display = 'none';
     }
 });
