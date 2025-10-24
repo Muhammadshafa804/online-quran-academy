@@ -4278,3 +4278,140 @@ footer {
         font-size: 0.9rem !important;
     }
 }
+
+/* ========== CONTACT INFORMATION FIX ========== */
+
+/* Contact Methods Styling */
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-method:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0c4a60;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-details h3 {
+    color: #FFD700;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-family: 'Amiri', serif;
+}
+
+.contact-link {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #FFD700 !important;
+    text-decoration: underline;
+}
+
+.contact-details span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    display: block;
+}
+
+/* Working Hours Content */
+.hours-content {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.hours-list p {
+    margin: 0 0 10px 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.hours-list p:last-child {
+    margin-bottom: 0;
+}
+
+.hours-list strong {
+    color: #FFD700;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Working Hours specific styling */
+.working-hours {
+    cursor: pointer !important;
+}
+
+.working-hours .contact-link {
+    cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-method {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .contact-details h3 {
+        font-size: 1rem;
+    }
+    
+    .contact-link {
+        font-size: 0.9rem;
+    }
+    
+    .hours-content {
+        padding: 15px;
+    }
+}
