@@ -135,3 +135,26 @@ document.addEventListener('DOMContentLoaded', function() {
         hoursDropdown.style.display = 'none';
     }
 });
+
+// ==================== NAVBAR TOGGLE CODE ====================
+// Mobile Navigation Toggle
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const navMenu = document.getElementById('navMenu');
+
+if (hamburgerMenu && navMenu) {
+    hamburgerMenu.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Close menu when clicking on links
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (hamburgerMenu && navMenu) {
+            hamburgerMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+});
+// ==================== END NAVBAR TOGGLE ====================
