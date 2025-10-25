@@ -213,3 +213,49 @@
         display: none !important;
     }
 }
+/* ==================== MOBILE NAVBAR TOGGLE FIX ==================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 80px; /* Navbar height */
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: linear-gradient(135deg, #0c4a60 0%, #1d6b7a 100%);
+        flex-direction: column;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Hamburger Animation */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
