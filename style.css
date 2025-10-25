@@ -4583,31 +4583,3 @@ footer {
     font-weight: 600;
 }
 
-/* ==================== FOOTER CONTACT LINKS MOBILE FIX ==================== */
-@media (max-width: 768px) {
-    footer .footer-section p,
-    footer .footer-section a {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
-    /* Specific fix for contact links */
-    footer a[href^="tel:"],
-    footer a[href^="mailto:"],
-    footer a[href*="whatsapp"] {
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        color: #ccc !important;
-        text-decoration: none !important;
-        margin-bottom: 8px !important;
-    }
-    
-    /* Ensure footer sections are visible */
-    .footer-content {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 25px !important;
-    }
-}
