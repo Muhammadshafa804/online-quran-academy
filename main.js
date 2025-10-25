@@ -136,3 +136,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// ==================== NAVBAR TOGGLE FIX ====================
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (hamburger && navMenu) {
+        console.log('Navbar elements found'); // Debugging
+        
+        hamburger.addEventListener('click', function() {
+            console.log('Hamburger clicked'); // Debugging
+            this.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    } else {
+        console.log('Navbar elements not found'); // Debugging
+    }
+});
