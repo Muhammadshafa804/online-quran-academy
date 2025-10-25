@@ -4583,3 +4583,32 @@ footer {
     font-weight: 600;
 }
 
+/* ==================== FOOTER MOBILE FIX ==================== */
+@media (max-width: 768px) {
+    /* Footer grid single column for mobile */
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
+    }
+    
+    /* Center align footer sections */
+    .footer-section {
+        text-align: center;
+    }
+    
+    /* Ensure contact links are visible */
+    .footer-section a {
+        display: block !important;
+        text-align: center !important;
+    }
+    
+    /* Social icons center */
+    .social-links {
+        justify-content: center !important;
+    }
+    
+    /* Contact info mobile styling */
+    .footer-section p {
+        justify-content: center !important;
+    }
+}
